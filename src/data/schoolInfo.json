@@ -1,0 +1,78 @@
+{
+  "school": {
+    "school_code": "R000007204",
+    "school_name": "김천중학교",
+    "school_kind_code": "03",
+    "foundation_type": "사립",
+    "coedu_type": "남녀공학",
+    "zip_code": "39632",
+    "address": "경상북도 김천시 송설로 90 (부곡동)",
+    "tel_number": "054-433-0611",
+    "fax_number": "054-436-3100",
+    "homepage_url": "https://school.gyo6.net/gimcheonms",
+    "office_of_education": "경상북도교육청",
+    "latitude": 36.1309,
+    "longitude": 128.1147,
+    "updated_at": "2026-06-05 13:07:51"
+  },
+  "student_stats": {
+    "school_code": "R000007204",
+    "total_students": 450,
+    "total_classes": 18,
+    "avg_students_per_class": 25,
+    "g1_classes": 6,
+    "g1_boys": 75,
+    "g1_girls": 75,
+    "g1_total": 150,
+    "g2_classes": 6,
+    "g2_boys": 70,
+    "g2_girls": 80,
+    "g2_total": 150,
+    "g3_classes": 6,
+    "g3_boys": 80,
+    "g3_girls": 70,
+    "g3_total": 150,
+    "updated_at": "2026-06-05 13:07:51"
+  },
+  "teacher_stats": {
+    "school_code": "R000007204",
+    "total_teachers": 38,
+    "male_teachers": 12,
+    "female_teachers": 26,
+    "principal_count": 1,
+    "vice_principal_count": 1,
+    "regular_teachers": 30,
+    "temporary_teachers": 6,
+    "students_per_teacher": 11.8,
+    "updated_at": "2026-06-05 13:07:51"
+  },
+  "facilities": {
+    "school_code": "R000007204",
+    "total_site_area": 15200,
+    "playground_area": 4500,
+    "general_classrooms": 18,
+    "special_classrooms": 6,
+    "auditorium_count": 1,
+    "library_books_count": 12500,
+    "disabled_facilities_text": "경사로 설치, 장애인 화장실 보유, 전 층 엘리베이터 운행",
+    "updated_at": "2026-06-05 13:07:51"
+  },
+  "operations": {
+    "school_code": "R000007204",
+    "regular_clubs_count": 24,
+    "autonomous_clubs_count": 8,
+    "after_school_programs_count": 15,
+    "after_school_student_ratio": 68.5,
+    "meal_service_type": "학교직영(단독조리)",
+    "meal_service_students": 430,
+    "uniform_price_won": 285000,
+    "updated_at": "2026-06-05 13:07:51"
+  },
+  "history_and_symbols": {
+    "foundation_spirit": "송설당(松雪堂) 최송설헌(崔松雪軒) 여사의 육영의 뜻으로 1931년 설립된 유서 깊은 민족사학",
+    "motto": "사수삼강(四修三綱) - 뜻을 높게 품고(志高), 행실을 바르게 하며(行正), 지식을 넓히고(識博), 몸을 튼튼히 하자(體健)",
+    "symbol_tree": "소나무 (지조, 절개, 푸른 기상)",
+    "symbol_flower": "매화 (고결, 인내, 선비 정신)",
+    "songseol_spirit": "겨울을 이겨내는 소나무와 눈처럼 맑고 곧은 기상"
+  }
+}
