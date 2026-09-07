@@ -116,7 +116,50 @@ sequenceDiagram
 
 ---
 
-## 6. How to Extend or Modify
+## 6. API Keys & Issuance Guide (API 발급처 및 상세 가이드)
+
+프로젝트에서 활용되거나 연동 가능한 4대 API의 공식 발급처와 절차입니다.
+
+### ① OpenRouter API Key (핵심 LLM 추론 엔진)
+- **공식 발급 URL**: [https://openrouter.ai/keys](https://openrouter.ai/keys)
+- **발급 방법**:
+  1. OpenRouter 사이트 회원가입 및 로그인 (Google/GitHub 계정 지원).
+  2. 상단 메뉴의 **Keys** 페이지로 이동 후 **Create Key** 버튼 클릭.
+  3. 키 이름(예: `Gimcheon-Chatbot`) 입력 후 생성된 키(`sk-or-v1-...`)를 복사하여 보관.
+  4. 필요에 따라 크레딧 충전(또는 무료 모델/기본 제공 크레딧) 후 사용.
+- **환경 변수 키명**: `OPENROUTER_API_KEY`
+- **사용 모델**: `deepseek/deepseek-v4-flash-0731` (또는 Claude, GPT, Gemini 등 호환 모델 지정 가능)
+
+### ② 교육부 나이스(NEIS) Open API Key (실시간 급식 & 학사일정)
+- **공식 발급 URL**: [https://open.neis.go.kr](https://open.neis.go.kr) (나이스 교육정보 개방 포털)
+- **발급 방법**:
+  1. 나이스 교육정보 개방 포털 사이트 회원가입 및 로그인.
+  2. 상단 메뉴의 **인증키 발급/관리** > **인증키 신청** 클릭.
+  3. 기본 정보 및 사용 목적 입력 후 **일반 인증키 신청** (신청 즉시 무료 자동 발급).
+- **환경 변수 키명**: `NEIS_API_KEY`
+- **조회 서비스**:
+  - `mealServiceDietInfo`: 학교 급식 식단 정보
+  - `SchoolSchedule`: 학사일정 정보
+
+### ③ 학교알리미 Open API Key (학교 공시 통계 및 시설 데이터)
+- **공식 발급 URL**: [https://www.schoolinfo.go.kr/openApi.do](https://www.schoolinfo.go.kr/openApi.do) (학교알리미 Open API)
+- **발급 방법**:
+  1. 학교알리미 포털 회원가입 및 로그인.
+  2. Open API 이용 신청 메뉴에서 인증키 신청.
+- **환경 변수 키명**: `SCHOOLINFO_API_KEY`
+- **용도**: 학생 수, 교원 통계, 시설 규모, 동아리 수 등 정형 공시 데이터 수집 및 갱신
+
+### ④ Google Gemini API Key (대체/백업용 LLM)
+- **공식 발급 URL**: [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) (Google AI Studio)
+- **발급 방법**:
+  1. Google 계정으로 AI Studio 로그인.
+  2. **Get API key** 클릭 후 새 프로젝트에서 키 생성 (무료 티어 제공).
+- **환경 변수 키명**: `GOOGLE_API_KEY`
+- **용도**: OpenRouter 장애 시 백업 또는 직접 Gemini 2.0 Flash 호출용
+
+---
+
+## 7. How to Extend or Modify
 
 1. **Adding New School Data**:
    - Update `src/data/schoolInfo.json` with new categories or updated statistics.
@@ -127,3 +170,4 @@ sequenceDiagram
    - Header: `src/components/Header.tsx`
    - Quick Prompt Chips: `src/components/QuickPrompts.tsx` (edit the `PROMPTS` array)
    - Chat Bubble Styling: `src/components/ChatMessage.tsx`
+

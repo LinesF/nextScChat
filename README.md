@@ -21,6 +21,17 @@
 
 ---
 
+## 🔑 필수 및 선택 API 키 발급 안내
+
+| API 명 | 용도 | 공식 발급 URL | 비용 및 특징 |
+| :--- | :--- | :--- | :--- |
+| **OpenRouter API** (필수) | DeepSeek V4 Flash 등 최신 LLM 추론 | [openrouter.ai/keys](https://openrouter.ai/keys) | 가입 즉시 키 생성, 다양한 최신 오픈/상용 모델 지원 |
+| **교육부 NEIS Open API** (선택) | 실시간 급식 식단 및 학사일정 동기화 | [open.neis.go.kr](https://open.neis.go.kr) | 완전 무료, 가입 후 '일반 인증키' 신청 즉시 자동 발급 |
+| **학교알리미 API** (데이터 보강용) | 학생/교원 수, 시설 현황 등 정형 통계 | [schoolinfo.go.kr](https://www.schoolinfo.go.kr/openApi.do) | 완전 무료 공공 데이터 포털 |
+| **Google AI Studio** (대체/백업용) | Gemini 모델 직접 호출 | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) | 무료 티어(Free tier) 넉넉하게 제공 |
+
+---
+
 ## 🚀 로컬 실행 방법
 
 ### 1. 의존성 설치
@@ -29,10 +40,10 @@ npm install
 ```
 
 ### 2. 환경 변수 설정
-`.env.example` 파일을 복사하여 `.env.local` 파일을 생성하고 Google Gemini API 키를 입력합니다.
+`.env.example` 파일을 복사하여 `.env.local` 파일을 생성하고 OpenRouter API 키를 입력합니다.
 ```env
-GOOGLE_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.0-flash
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+OPENROUTER_MODEL=deepseek/deepseek-v4-flash-0731
 NEIS_API_KEY=your_neis_key_optional
 ```
 
